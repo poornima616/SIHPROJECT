@@ -1,0 +1,28 @@
+# Root level .gitignore
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment files (NEVER commit these)
+.env
+.env.local
+.env.*.local
+
+# Documentation/notes (optional)
+NOTES.md
+PRIVATE_NOTES.md
+
+# System files
+.env.example (keep this, but not .env)
