@@ -63,15 +63,17 @@ export const Landing = () => {
                   gutterBottom
                   sx={{
                     fontWeight: 800,
+                    fontSize: { xs: '2.5rem', md: '3.5rem' },
                     background: 'linear-gradient(90deg, #0052CC 0%, #FF9933 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
+                    mb: 2,
                   }}
                 >
                   Find Your Perfect Internship
                 </Typography>
-                <Typography variant="h5" color="text.secondary" paragraph>
-                  Join India's largest internship platform under the Pradhan Mantri Internship Scheme
+                <Typography variant="h5" color="text.secondary" paragraph sx={{ fontSize: '1.2rem', lineHeight: 1.8, mb: 3 }}>
+                  Join India's largest internship platform under the Pradhan Mantri Internship Scheme and kickstart your career with top companies
                 </Typography>
                 <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mt: 4 }}>
                   <Button
@@ -106,15 +108,74 @@ export const Landing = () => {
                 <Box
                   sx={{
                     width: '100%',
-                    height: 400,
-                    borderRadius: 4,
+                    height: 500,
+                    borderRadius: 6,
                     background: 'linear-gradient(135deg, #0052CC 0%, #2196F3 100%)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    boxShadow: '0 20px 60px rgba(0, 82, 204, 0.3)',
+                    position: 'relative',
+                    overflow: 'hidden',
                   }}
                 >
-                  <Briefcase size={120} color="white" />
+                  <svg
+                    viewBox="0 0 400 400"
+                    width="100%"
+                    height="100%"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ position: 'absolute' }}
+                  >
+                    {/* Background circles */}
+                    <circle cx="100" cy="100" r="80" fill="rgba(255,255,255,0.1)" />
+                    <circle cx="300" cy="300" r="100" fill="rgba(255,255,255,0.05)" />
+
+                    {/* Briefcase */}
+                    <g transform="translate(200, 180)">
+                      <rect x="-60" y="-20" width="120" height="90" rx="8" fill="white" />
+                      <rect x="-70" y="-30" width="140" height="15" rx="5" fill="rgba(255,255,255,0.8)" />
+                      <circle cx="-30" cy="-30" r="6" fill="#FF9933" />
+                      <circle cx="30" cy="-30" r="6" fill="#FF9933" />
+                      {/* Handle */}
+                      <path
+                        d="M -40 -30 Q -40 -60 0 -70 Q 40 -60 40 -30"
+                        stroke="white"
+                        strokeWidth="8"
+                        fill="none"
+                        strokeLinecap="round"
+                      />
+                    </g>
+
+                    {/* Documents/Papers */}
+                    <g transform="translate(120, 250)">
+                      <rect x="0" y="0" width="40" height="50" rx="2" fill="rgba(255,255,255,0.6)" />
+                      <line x1="5" y1="10" x2="35" y2="10" stroke="#FF9933" strokeWidth="2" />
+                      <line x1="5" y1="18" x2="35" y2="18" stroke="#FF9933" strokeWidth="2" />
+                      <line x1="5" y1="26" x2="30" y2="26" stroke="#FF9933" strokeWidth="2" />
+                    </g>
+
+                    {/* Cheque/Certificate */}
+                    <g transform="translate(280, 260)">
+                      <rect x="0" y="0" width="50" height="35" rx="3" fill="rgba(255,255,255,0.7)" />
+                      <circle cx="10" cy="10" r="5" fill="#FF9933" />
+                      <line x1="15" y1="10" x2="45" y2="10" stroke="#FF9933" strokeWidth="1.5" />
+                      <line x1="15" y1="16" x2="45" y2="16" stroke="#FF9933" strokeWidth="1.5" />
+                      <line x1="15" y1="25" x2="45" y2="25" stroke="#FF9933" strokeWidth="1.5" />
+                    </g>
+
+                    {/* Trending arrow */}
+                    <g transform="translate(200, 100)">
+                      <line x1="0" y1="20" x2="0" y2="0" stroke="rgba(255,255,255,0.8)" strokeWidth="3" strokeLinecap="round" />
+                      <path
+                        d="M -8 8 L 0 0 L 8 8"
+                        stroke="rgba(255,255,255,0.8)"
+                        strokeWidth="3"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </g>
+                  </svg>
                 </Box>
               </motion.div>
             </Grid>
